@@ -11,3 +11,4 @@
 *button - creates a button to submit/save the form
 *fieldset - creates an entry field for a group of inputs
 *div - dividing the input boxes into blocks, to separate them
+*input - provides the whole input box
