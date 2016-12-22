@@ -1,0 +1,32 @@
+section#contact-info {
+    font-size: .8em;
+}
+
+section.job {
+  background-color: #e9e5dc;
+  border-radius: 25px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.text-size {
+  font-size: .8em;
+}
+
+/* Code Examples for Release 2 */
+
+/* Cascading is the order of operations, certain properties have preference over others.
+Built in order of operations. Inline CSS elements can overrule an external CSS file or style tag.
+Preference goes to more specific code, and code that is furthur down in the CSS file.*/
+
+/* A pseudo-selector*/
+
+h1:hover {
+	color: red;
+}
+
+/* Selecting a child element of another element */
+
+section ul {
+	background-color: blue;
+}
