@@ -30,3 +30,41 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+
+body {
+  max-width: 960px;
+}
+
+main {
+  display: inline-block;
+  vertical-align: text-top;
+  width: 60%;
+}
+
+#external-links {
+  display: inline-block;
+  vertical-align: text-top;
+  width: 20%;
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #external-links {
+    display: block;
+  }
+}
+
+/* 
+Makes screen background color turn pink when less than 500px wide
+
+@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+} 
+*/
