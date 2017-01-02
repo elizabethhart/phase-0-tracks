@@ -1,0 +1,17 @@
+# Pseudocode for using an elevator
+
+# - Locate elevator call buttons
+# - If the floor you want to go to is less than your current floor:
+# 	- Push the button with the down arrow
+# - Otherwise:
+# 	- Push the button with the up arrow
+# - Wait until the elevator doors open
+# - Enter elevator
+# - Locate list of floor buttons on wall
+# - Read the numbers on each button, starting with the lowest floor number:
+# 	- If the number matches the floor you wish to go:
+#		- Push the button
+# 	- Otherwise:
+#		- Move to the next button and read
+# - The doors will close and the elevator will begin to move
+# - When the doors reopen, exit the elevator
