@@ -1,37 +1,35 @@
+body {
+  background-color: pink;
+  font-family: Verdana;
+}
+
 section {
   display: inline-block;
+  border-radius: 5px;
   width: 48%;
   vertical-align: text-top;
-  padding: 5px;
+  padding-left: 2px;
+  padding-right: 2px;
+  min-height: 1200px;
 }
 
 header, footer {
-  margin: 10px 10px;
-  padding: 10px;
+  margin: 10px, 10px;
   text-align: center;
+}
+
+.column-1 {
+  border: 1px dashed black;
+}
+
+.column-2 {
+  border: 1px dotted black;
 }
 
 header {
   background-color: yellow;
 }
 
-body {
-  font-family: Verdana;
-  background-color: pink;
-}
-
 footer {
   background-color: green;
-}
-
-.column-1 {
-  border: 1px black dashed;
-  height: 1200px;
-  border-radius: 5px;
-}
-
-.column-2 {
-  border: 1px black dotted;
-  height: 1200px;
-  border-radius: 5px;
 }
