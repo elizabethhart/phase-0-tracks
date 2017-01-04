@@ -1,0 +1,37 @@
+section {
+  display: inline-block;
+  width: 48%;
+  vertical-align: text-top;
+  padding: 5px;
+}
+
+header, footer {
+  margin: 10px 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+header {
+  background-color: yellow;
+}
+
+body {
+  font-family: Verdana;
+  background-color: pink;
+}
+
+footer {
+  background-color: green;
+}
+
+.column-1 {
+  border: 1px black dashed;
+  height: 1200px;
+  border-radius: 5px;
+}
+
+.column-2 {
+  border: 1px black dotted;
+  height: 1200px;
+  border-radius: 5px;
+}
