@@ -1,4 +1,5 @@
 # Method to convert yes/no responses to booleans
+
 def boolean_convert(str)
   if str == "yes"
     str = true 
@@ -14,6 +15,7 @@ count = gets.chomp.to_i
 
 x = 0
 
+# Loop processing code until through every employee
 while x < count
 
   puts "What is your name?"
@@ -26,6 +28,7 @@ while x < count
   puts "What year were you born?"
   # Converting string response to integer 
   year = gets.chomp.to_i 
+  
   # Converting birth year to age
   age_2 = 2017 - year
   
@@ -42,30 +45,36 @@ while x < count
   puts "Would you like to enroll in the company’s health insurance? (yes/no)"
   insurance = boolean_convert(gets.chomp) 
   
+  # Check for sunshine allergy
   puts "Please list any allergies, type \"done\" when finished."
   allergies = gets.chomp 
+  
   until allergies == "done" || allergies == "sunshine"
     puts "Please list any allergies, type \"done\" when finished."
     allergies = gets.chomp
   end
-
-  # Check to see the likelihood of being a vampire
-  if age == true && (garlic || insurance)
-    if name == "Drake Cula" || name == "Tu Fang"
-      puts "Definitely a vampire."
+  
+  if allergies == "sunshine"
+    puts "Probably a vampire"
+  else 
+    # Check to see the likelihood of being a vampire
+    if age == true && (garlic || insurance)
+      if name == "Drake Cula" || name == "Tu Fang"
+        puts "Definitely a vampire."
+      else
+        puts "Probably not a vampire."
+      end
+    elsif age == false && (garlic == false || insurance == false)
+      if garlic == false && insurance == false
+        puts "Almost certainly a vampire."
+      else 
+        puts "Probably a vampire."
+      end
     else
-      puts "Probably not a vampire."
+      puts "Results inconclusive."
     end
-  elsif age == false && (garlic == false || insurance == false)
-    if garlic == false && insurance == false
-      puts "Almost certainly a vampire."
-    else 
-      puts "Probably a vampire."
-    end
-  else
-    puts "Results inconclusive."
-  end
-    
+  end  
+  
   x += 1
   
 end
