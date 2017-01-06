@@ -64,12 +64,10 @@ while x < count
       else
         puts "Probably not a vampire."
       end
-    elsif age == false && (garlic == false || insurance == false)
-      if garlic == false && insurance == false
-        puts "Almost certainly a vampire."
-      else 
+    elsif age == false && (garlic != insurance)
         puts "Probably a vampire."
-      end
+    elsif (garlic == false) && (insurance == false)
+        puts "Almost certainly a vampire."
     else
       puts "Results inconclusive."
     end
@@ -78,3 +76,5 @@ while x < count
   x += 1
   
 end
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
