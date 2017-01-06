@@ -1,4 +1,4 @@
-# In order to figure out how long the string is, we would utilize the .length method on the string to determine how long the loop will be run. We would take a string inside a loop and use the .next method to keep moving to the next character until we reached the end of the string.  #
+# In order to figure out how long the string is, we would utilize the .length method on the string to determine how long the loop will be run. We would take a string inside a loop and use the .next method to keep moving to the next character until we reached the end of the string.  
 
 def encryption_method(string)
   x = 0
@@ -15,7 +15,7 @@ def encryption_method(string)
   return string
 end
 
-# Ask the user for a word to encrypt. Save as a variable. Create variable to alphabet. Create while look using .length to run through the length of the entire string. Calculate position of each letter in the alphabet, and subtract one from that number. #
+# Ask the user for a word to encrypt. Save as a variable. Create variable to alphabet. Create while look using .length to run through the length of the entire string. Calculate position of each letter in the alphabet, and subtract one from that number. 
 
 def decryption_method(string)
   var2 = "abcdefghijklmnopqrstuvwxyz"
@@ -31,3 +31,5 @@ end
 decryption_method(encryption_method("swordfish"))
 
 p decryption_method(encryption_method("swordfish"))
+
+# The encryption_method returns an encrypted string back into the decryption method when it is then decrypted back into the original string
