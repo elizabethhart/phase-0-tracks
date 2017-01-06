@@ -1,3 +1,8 @@
+puts "Would you like to decrypt or encrypt a password?"
+response = gets.chomp
+puts "What is the password?"
+password = gets.chomp
+
 # In order to figure out how long the string is, we would utilize the .length method on the string to determine how long the loop will be run. We would take a string inside a loop and use the .next method to keep moving to the next character until we reached the end of the string.  
 
 def encryption_method(string)
@@ -28,8 +33,14 @@ def decryption_method(string)
   return string
 end
 
-decryption_method(encryption_method("swordfish"))
+# decryption_method(encryption_method("swordfish"))
 
-p decryption_method(encryption_method("swordfish"))
+# p decryption_method(encryption_method("swordfish"))
 
 # The encryption_method returns an encrypted string back into the decryption method when it is then decrypted back into the original string
+
+if response == "encrypt"
+  p encryption_method(password)
+else
+  p decryption_method(password)
+end
