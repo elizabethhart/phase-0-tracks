@@ -28,7 +28,7 @@
 "The mystery of the missing first letter".slice(1..-1)
 # => "he mystery of the missing first letter"
 
-puts "Elementary,    my   dear        Watson!".squeeze(" ")
+"Elementary,    my   dear        Watson!".squeeze(" ")
 # => "Elementary, my dear Watson!"
 
 "z".ord
