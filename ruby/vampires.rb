@@ -30,7 +30,7 @@ while x < count
   year = gets.chomp.to_i 
   
   # Converting birth year to age
-  age_2 = 2017 - year
+  age_2 = Time.new.year - year
   
   # Check to see that the ages match
   if age == age_2
