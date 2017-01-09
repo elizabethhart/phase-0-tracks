@@ -58,12 +58,10 @@ while x < count
     puts "Probably a vampire"
   else 
     # Check to see the likelihood of being a vampire
-    if age == true && (garlic || insurance)
-      if name == "Drake Cula" || name == "Tu Fang"
+    if name == "Drake Cula" || name == "Tu Fang"
         puts "Definitely a vampire."
-      else
+    elsif age == true && (garlic || insurance)
         puts "Probably not a vampire."
-      end
     elsif age == false && (garlic != insurance)
         puts "Probably a vampire."
     elsif (garlic == false) && (insurance == false)
