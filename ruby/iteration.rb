@@ -9,6 +9,7 @@ puts "Before the block runs"
 hotels_available { |hotel1, hotel2| puts "The #{hotel1} is available. The #{hotel2} is not available."}
 puts "After the block runs"
 
+
 pets = ["dog", "cat", "snake", "bunny", "turtle"]
 
 pets_names = {
@@ -19,15 +20,23 @@ pets_names = {
 	"turtle" => "Henry"
 }
 
+p pets
+
 pets.each do |x|
 	puts "Everybody loves #{x}s!"
 end
 
 pets.map! do |x|
-	puts x.upcase.reverse
+	p x.upcase.reverse
 end
+
+p pets
+
+p pets_names
 
 pets_names.each do |pet, name|
   puts "This #{pet} is named #{name}."
 end
+
+p pets_names
 
