@@ -1,4 +1,4 @@
-Hogwarts = {
+hogwarts = {
 	main_office: {
 		staff: {
 			headmaster: "Albus Dumbledore",
@@ -38,7 +38,10 @@ Hogwarts = {
 			hoops: 6,
 			brooms: 3,
 			bludgers: 2,
-			quaffles: 1,
+			quaffles: {
+				deflated: 4,
+				inflated: 2
+			},
 			golden_snitch: 1,
 		},
 		teams: [
@@ -46,3 +49,11 @@ Hogwarts = {
 		]
 	}
 }
+
+p hogwarts[:quidditch_field][:players][0]
+
+p hogwarts[:main_office][:staff][:headmaster]
+
+p hogwarts[:classroom_2][:furniture]
+
+p hogwarts[:quidditch_field][:equipment][:quaffles][:deflated]
