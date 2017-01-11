@@ -13,13 +13,7 @@ end
 	# Empty values to start
 
 client_info = {
-	name: "",
-	age: "",
-	number_children: "",
-	decor_theme: "",
-	phone: "",
-	likes_color: "",
-	rich: "" 
+
 }
 
 # Prompt user for information
