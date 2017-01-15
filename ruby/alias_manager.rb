@@ -10,7 +10,6 @@ def alias_maker(first_last)
   new_name = last_first.split('')
   
 # Convert letters
-  
   new_name.map! do |letter|
     vowels = ["a", "e", "i", "o", "u"]
     if vowels.include?(letter)
@@ -34,21 +33,26 @@ def alias_maker(first_last)
   end
   
 # Join the two strings back into one string
-
   lowercase_name = new_name.join('')
 
 # Resplit the strings into an array
-  
   uppercase_name = lowercase_name.split(' ')
   
 # Capitalize the names again  
-  
   uppercase_name.map! { |name| name.capitalize }
   
 # Join the array back into a string
-  
   return uppercase_name.join(' ')
   
 end 
 
-p alias_maker("Felicia Torres")
+# User Interface
+puts "Please enter a name or type 'quit'"
+response = gets.chomp
+
+until response == "quit"
+  new_name = alias_maker(response)
+  puts "Your new alias is #{new_name}!"
+  puts "Please enter a name or type 'quit'"
+  response = gets.chomp
+end
