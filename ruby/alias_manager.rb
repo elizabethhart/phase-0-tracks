@@ -50,9 +50,19 @@ end
 puts "Please enter a name or type 'quit'"
 response = gets.chomp
 
+# Initialize a hash
+alias_database = {}
+
+# Add values to hash 
 until response == "quit"
   new_name = alias_maker(response)
+  alias_database[response] = alias_maker(response)
   puts "Your new alias is #{new_name}!"
   puts "Please enter a name or type 'quit'"
   response = gets.chomp
+end
+
+# Iterate through the hash and print
+alias_database.each do |name, new_alias|
+  p "#{name} is also known as #{new_alias}"
 end
