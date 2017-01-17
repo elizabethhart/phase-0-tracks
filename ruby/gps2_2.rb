@@ -94,6 +94,32 @@ update_list(my_list,"pickles",2)
 
 print_list(my_list)
 
+# Reflection
+
+# What did you learn about pseudocode from working on this challenge?
+
+	# I learned that the more detail you put into writing your pseudocode, the easier and faster it is to write your actual code. Having the input, steps, and output sections made it much easier to visualize what we wanted the code to do.
+
+# What are the tradeoffs of using arrays and hashes for this challenge?
+
+	# Arrays are easier to work with because they only contain one value per index, but hashes can contain more detailed information having key value pairs.
+
+# What does a method return?
+
+	# A method returns the output of the code written within the method.
+
+# What kind of things can you pass into methods as arguments?
+
+	# You can pass in strings, integers, booleans, arrays, hashes, as long as your method code is written to accept that data type/structure.
+
+# How can you pass information between methods?
+
+	# In this challenge we passed information between methods by using the output of a previous method in our next method, and so on.
+
+# What concepts were solidified in this challenge, and what concepts are still confusing?
+
+	# Iteration through hashes became much clearer to me in this challenge. Sometimes I still get confused with proper syntax when calling built in methods.
+
 
 
 
