@@ -36,3 +36,37 @@ p spot.roll_over()
 p spot.dog_years(10)
 p spot.shake()
 
+class Kittens
+
+	def initialize
+		puts "Initializing new kitten instance ..."
+	end
+
+	def speak(num)
+		p "Purr" * num
+	end
+
+	def catch_mouse(num)
+		p "Caught #{num} mice!"
+	end
+
+	def sleep
+		p "The kitten fell asleep."
+	end
+
+end
+
+fluffy = Kittens.new
+
+kitten_array = []
+
+50.times do 
+	kitten_array << Kittens.new
+end
+
+kitten_array.each do |kitten|
+	fluffy.speak(4)
+	fluffy.catch_mouse(2)
+	fluffy.sleep
+end
+
