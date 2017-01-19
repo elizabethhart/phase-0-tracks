@@ -20,6 +20,13 @@ class Santa
 		puts @age += 1
 	end
 
+	def get_mad_at(reindeers_name)
+		idx = @reindeer_ranking.find_index(reindeers_name)
+		@reindeer_ranking << @reindeer_ranking[idx]
+		@reindeer_ranking.delete_at(idx)
+		p @reindeer_ranking
+	end
+
 end
 
 jolly = Santa.new("non-binary","eurasian")
@@ -27,6 +34,7 @@ jolly = Santa.new("non-binary","eurasian")
 jolly.speak
 jolly.eat_milk_and_cookies("chocolate chip cookie")
 jolly.celebrate_birthday
+jolly.get_mad_at("Vixen")
 
 santas = []
 example_genders = ["non-binary", "female", "two-spirit"]
