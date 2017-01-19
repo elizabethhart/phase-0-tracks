@@ -30,6 +30,14 @@ class Santa
 		@gender
 	end
 
+	def age
+		@age
+	end
+
+	def ethnicity
+		@ethnicity
+	end
+
 	def gender=(new_gender)
 		@gender = new_gender
 	end
