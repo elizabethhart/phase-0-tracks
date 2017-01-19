@@ -16,12 +16,17 @@ class Santa
 		puts "That was a good #{cookie_type}!"
 	end
 
+	def celebrate_birthday
+		puts @age += 1
+	end
+
 end
 
 jolly = Santa.new("non-binary","eurasian")
 
 jolly.speak
 jolly.eat_milk_and_cookies("chocolate chip cookie")
+jolly.celebrate_birthday
 
 santas = []
 example_genders = ["non-binary", "female", "two-spirit"]
