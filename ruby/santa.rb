@@ -7,12 +7,14 @@ class Santa
 
 	def initialize(gender,ethnicity)
 		puts "Initializing Santa instance ..."
+		# Release 1 Give Santa Attributes
 		@gender = gender
 		@ethnicity = ethnicity
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 		@age = 0
 	end
 
+	# Release 0 Bring Santa to Life
 	def speak
 		puts "Ho, ho, ho! Haaaappy holidays!"
 	end
@@ -21,6 +23,7 @@ class Santa
 		puts "That was a good #{cookie_type}!"
 	end
 
+	# Release 2 Attribute Changing Methods
 	def celebrate_birthday
 		@age += 1
 	end
@@ -49,22 +52,21 @@ example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer n
   puts "Age: #{jolly.age + rand(0...140)}"
 end
 
-# jolly.speak
-# jolly.eat_milk_and_cookies("chocolate chip cookie")
-# jolly.celebrate_birthday
-# jolly.get_mad_at("Vixen")
-# jolly.gender = "male"
-
-# puts "#{jolly.gender}"
-
-# santas = []
-# example_genders = ["non-binary", "female", "two-spirit"]
-# example_ethnicities = ["Afrikaner", "Jewish", "Native American"]
-# example_genders.length.times do |i|
-# 	puts "Creating a new Santa ..."
-# 	santas << Santa.new(example_genders[i], example_ethnicities[i])
-# 	puts "The new Santa is #{example_genders[i]} and #{example_ethnicities[i]}!"
-# end
+# Test initializations
+	# jolly.speak
+	# jolly.eat_milk_and_cookies("chocolate chip cookie")
+	# jolly.celebrate_birthday
+	# jolly.get_mad_at("Vixen")
+	# jolly.gender = "male"
+	# puts "#{jolly.gender}"
+	# santas = []
+	# example_genders = ["non-binary", "female", "two-spirit"]
+	# example_ethnicities = ["Afrikaner", "Jewish", "Native American"]
+	# example_genders.length.times do |i|
+	# 	puts "Creating a new Santa ..."
+	# 	santas << Santa.new(example_genders[i], example_ethnicities[i])
+	# 	puts "The new Santa is #{example_genders[i]} and #{example_ethnicities[i]}!"
+	# end
 
 
 
