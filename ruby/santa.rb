@@ -1,6 +1,8 @@
 class Santa
 
+	# Getter methods
 	attr_reader :age, :ethnicity
+	# Setter methods
 	attr_accessor :gender
 
 	def initialize(gender,ethnicity)
@@ -31,24 +33,32 @@ class Santa
 
 end
 
-jolly = Santa.new("non-binary","eurasian")
-
-jolly.speak
-jolly.eat_milk_and_cookies("chocolate chip cookie")
-jolly.celebrate_birthday
-jolly.get_mad_at("Vixen")
-jolly.gender = "male"
-
-puts "#{jolly.gender}"
-
+# Driver Code
 santas = []
-example_genders = ["non-binary", "female", "two-spirit"]
-example_ethnicities = ["Afrikaner", "Jewish", "Native American"]
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 example_genders.length.times do |i|
-	puts "Creating a new Santa ..."
-	santas << Santa.new(example_genders[i], example_ethnicities[i])
-	puts "The new Santa is #{example_genders[i]} and #{example_ethnicities[i]}!"
+  santas << Santa.new(example_genders[i], example_ethnicities[i])
 end
+
+# jolly = Santa.new("non-binary","eurasian")
+
+# jolly.speak
+# jolly.eat_milk_and_cookies("chocolate chip cookie")
+# jolly.celebrate_birthday
+# jolly.get_mad_at("Vixen")
+# jolly.gender = "male"
+
+# puts "#{jolly.gender}"
+
+# santas = []
+# example_genders = ["non-binary", "female", "two-spirit"]
+# example_ethnicities = ["Afrikaner", "Jewish", "Native American"]
+# example_genders.length.times do |i|
+# 	puts "Creating a new Santa ..."
+# 	santas << Santa.new(example_genders[i], example_ethnicities[i])
+# 	puts "The new Santa is #{example_genders[i]} and #{example_ethnicities[i]}!"
+# end
 
 
 
