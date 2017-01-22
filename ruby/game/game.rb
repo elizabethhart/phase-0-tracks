@@ -1,20 +1,22 @@
 # Word Guessing Game
 class Game
-  
+
+  # Allow arrays to be accessible outside of the class
   attr_accessor :empty_array
   attr_accessor :word_array
 
+  	# Initialize empty arrays
 	def initialize
 		@word_array = []
 		@empty_array = []
 	end
 
-	# Save the word
+	# Save the word inside of an array
 	def store(word)
 		@word_array = word.split('')
 	end
 
-	# Create an array of underscores based on length of word"
+	# Create an array of underscores based on length of word
 	def create_empty_array(word)
 		length = word.length
 		@empty_array = ["_ "]*length
@@ -22,7 +24,6 @@ class Game
 
 	# Check if that letter is in the word
 	def check_word(letter)
-		# Is the letter in the string?
 		if @word_array.include? letter
 			true
 		else
@@ -37,15 +38,17 @@ class Game
 		while @index < @word_array.length
 			# Check if letter matches letter in index
 			if @word_array[@index] == letter
-			  @empty_array[@index] = "#{letter} "
+				# Assign letter to empty array
+				@empty_array[@index] = "#{letter} "
 			end
 			# Check next index in array
 			@index += 1
 		end
+		# Return empty array with new letters added
 		@empty_array
 	end
 
-	# Convert array to string
+	# Convert array to string and remove whitespace
 	def array_to_string(arr)
 		string = arr.join("")
 		string = string.delete(" ")
