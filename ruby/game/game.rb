@@ -1,16 +1,12 @@
 # Word Guessing Game
 class Game
   
-  attr_accessor :guess_count
+  attr_accessor :empty_array
+  attr_accessor :word_array
 
 	def initialize
-		# Initialize a word array
-		@word_array = ["s","i","m","p","l","e"]
-		# Initialize an empty array
-		@empty_array = ["_ ","_ ","_ ","_ ","_ ","_ "]
-		# Initialize a counter variable
-		@guess_count = 0
-		@index = 0
+		@word_array = []
+		@empty_array = []
 	end
 
 	# Save the word
@@ -26,8 +22,6 @@ class Game
 
 	# Check if that letter is in the word
 	def check_word(letter)
-		# Add one to the guess counter
-		@guess_count += 1
 		# Is the letter in the string?
 		if @word_array.include? letter
 			true
@@ -38,12 +32,12 @@ class Game
 
 	# Assign letter to the empty array
 	def assign_letter(letter)
+	  @index = 0
 		# Run the following loop until the the counter reaches the maximum length
 		while @index < @word_array.length
 			# Check if letter matches letter in index
 			if @word_array[@index] == letter
-				# Assign letter to that index in empty array
-				@empty_array[@index] = "#{letter} "
+			  @empty_array[@index] = "#{letter} "
 			end
 			# Check next index in array
 			@index += 1
@@ -51,50 +45,58 @@ class Game
 		@empty_array
 	end
 
-	def array_to_string(array)
-		string = array.join(' ')
-		string.gsub!(/\s+/, '')
-		string
+	# Convert array to string
+	def array_to_string(arr)
+		string = arr.join("")
+		string = string.delete(" ")
 	end
 
 end
 
-# # Driver Code
+# Driver Code
 
-# # Initialize a new instance of class Game
-# game = Game.new
+# Allow the user to enter a word 
+puts "Player 1: Please enter a word:"
+word = gets.chomp
 
-# # Allow the user to enter a word 
-# puts "Player 1: Please enter a word:"
-# word = gets.chomp
+# Initialize a new instance of class Game
+game = Game.new
 
-# # Count the characters in the word
-# max_guesses = word.length + 5
+# Count the characters in the word
+max_guesses = word.length + 5
 
-# puts "Player 2: You have #{max_guesses} guesses to find the correct word"
-# guess_count = 0
+puts "Player 2: You have #{max_guesses} guesses to find the correct word"
+guess_count = 0
 
-# # Print out string of underscores representing each character
-# p game.create_empty_array(word).join('')
+# Print out string of underscores representing each character
+p game.create_empty_array(word).join('')
 
-# # Loop through game until guesses run out
-# while guess_count <= max_guesses
-#   # Ask the next user to guess a letter
-#   puts "Player 2: Please guess a letter:"
-#   letter = gets.chomp
-#   game.store(word)
-#   if game.check_word(letter)
-#     p game.assign_letter(letter).join('')
-#     game.assign_letter(letter)
-#   else
-#     puts "Nope! Guess again!"
-#   end
-#   guess_count += 1
-#   guesses_left = max_guesses - guess_count
-#   puts "Player 2: You have #{guesses_left} guess left"
-# end
-
-# If the user guesses all of the letters correctly before the limited guesses are over
-# 	Print a congratulations
-# Or if they did not get the word
-# 	Print a taunting message
+# Loop through game until guesses run out
+while guess_count < max_guesses
+  # Ask the next user to guess a letter
+  puts "Player 2: Please guess a letter:"
+  letter = gets.chomp
+  game.store(word)
+  if game.check_word(letter)
+    @empty_array = game.assign_letter(letter)
+    p @empty_array.join('')
+  else
+    puts "Nope! Guess again!"
+  end
+  # If the user guesses all of the letters correctly
+  if game.array_to_string(@empty_array) == word
+    # Print a congratulations
+    puts "Congratulations you guessed the word!"
+    break
+  # Or if they did not get the word
+  else 
+    guess_count += 1
+    guesses_left = max_guesses - guess_count
+    if guesses_left == 0 
+      # Print a taunting message
+      puts "No more guesses! You lost!"
+    else
+      puts "Player 2: You have #{guesses_left} guesses left"
+    end
+  end
+end
