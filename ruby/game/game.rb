@@ -2,6 +2,7 @@
 class Game
 
 	def initialize
+		# Initialize a counter variable
 		@guess_count = 0
 		@index = 0
 	end
@@ -14,36 +15,39 @@ class Game
 	# Create an array of underscores based on length of word"
 	def create_empty_array(word)
 		length = word.length
-		@empty_array = ["_ "]
-		@empty_array*length
+		@empty_array = ["_ "]*length
 	end
 
-	# Run the following loop until the the counter reaches the maximum length
-	# Ask the next user to guess a letter
 	# Check if that letter is in the word
-	# If the letter is in the word
-		# Print the letter where it is in the word, with underscores everywhere else
-	# Or print guess again
-	# Add one to the counter variable
-	def check_word(letter)
-		# # Add one to the guess counter
-		# @guess_count += 1
-		# while @index < @word_array.length
-		# 	# Check if letter matches letter in index
-		# 	if @word_array[index] = letter
-		# 		# Assign letter to that index in empty array
-		# 		@empty_array[index] = letter
-		# 	end
-		# 	# Check next index in array
-		# 	@index += 1
-		# end		
+	def check_word(word, letter)
+		# Add one to the guess counter
+		@guess_count += 1
+		# Is the letter in the string?
+		if word.include? letter
+			true
+		else
+			# Or print guess again	
+			p "Nope! Guess again!"
+		end	
 	end
 
 end
 
 # Allow the user to enter a word 
 # Count the characters in the word
-# Initialize a counter variable based on how long the word is
+# Ask the next user to guess a letter
+# Run the following loop until the the counter reaches the maximum length
+# while @index < @word_array.length
+# 	# Check if letter matches letter in index
+# 	if @word_array[index] = letter
+# 		# Assign letter to that index in empty array
+# 		@empty_array[index] = letter
+# 		# Print the letter where it is in the word, with underscores everywhere else
+# 		empty_string = @empty_array.join
+# 	end
+# 	# Check next index in array
+# 	@index += 1
+# end
 # If the user guesses all of the letters correctly before the limited guesses are over
 	#Print a congratulations
 # Or if they did not get the word
