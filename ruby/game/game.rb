@@ -1,5 +1,7 @@
 # Word Guessing Game
 class Game
+  
+  attr_accessor :guess_count
 
 	def initialize
 		# Initialize a word array
@@ -30,8 +32,7 @@ class Game
 		if @word_array.include? letter
 			true
 		else
-			# Or print guess again	
-			p "Nope! Guess again!"
+			false
 		end	
 	end
 
@@ -42,22 +43,58 @@ class Game
 			# Check if letter matches letter in index
 			if @word_array[@index] == letter
 				# Assign letter to that index in empty array
-				@empty_array[@index] = letter
-				# Print the letter where it is in the word, with underscores everywhere else
-				empty_string = @empty_array.join
+				@empty_array[@index] = "#{letter} "
 			end
 			# Check next index in array
 			@index += 1
 		end
-		@empty_array.join('')
+		@empty_array
+	end
+
+	def array_to_string(array)
+		string = array.join(' ')
+		string.gsub!(/\s+/, '')
+		string
 	end
 
 end
 
-# Allow the user to enter a word 
-# Count the characters in the word
-# Ask the next user to guess a letter
+# # Driver Code
+
+# # Initialize a new instance of class Game
+# game = Game.new
+
+# # Allow the user to enter a word 
+# puts "Player 1: Please enter a word:"
+# word = gets.chomp
+
+# # Count the characters in the word
+# max_guesses = word.length + 5
+
+# puts "Player 2: You have #{max_guesses} guesses to find the correct word"
+# guess_count = 0
+
+# # Print out string of underscores representing each character
+# p game.create_empty_array(word).join('')
+
+# # Loop through game until guesses run out
+# while guess_count <= max_guesses
+#   # Ask the next user to guess a letter
+#   puts "Player 2: Please guess a letter:"
+#   letter = gets.chomp
+#   game.store(word)
+#   if game.check_word(letter)
+#     p game.assign_letter(letter).join('')
+#     game.assign_letter(letter)
+#   else
+#     puts "Nope! Guess again!"
+#   end
+#   guess_count += 1
+#   guesses_left = max_guesses - guess_count
+#   puts "Player 2: You have #{guesses_left} guess left"
+# end
+
 # If the user guesses all of the letters correctly before the limited guesses are over
-	#Print a congratulations
+# 	Print a congratulations
 # Or if they did not get the word
-	#Print a taunting message
+# 	Print a taunting message
