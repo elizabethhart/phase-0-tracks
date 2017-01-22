@@ -16,7 +16,7 @@ describe Game do
 	end
 	
 	it "assigns the letter to the empty array and print string" do
-		expect(game.assign_letter("p")).to eq "_ _ _ p_ _ _ "
+		expect(game.assign_letter("p")).to eq "_ _ _ p_ _ "
 	end	
 
 end
