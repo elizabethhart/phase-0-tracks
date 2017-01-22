@@ -16,7 +16,11 @@ describe Game do
 	end
 	
 	it "assigns the letter to the empty array and print string" do
-		expect(game.assign_letter("p")).to eq "_ _ _ p_ _ "
+		expect(game.assign_letter("p")).to eq ["_ ","_ ","_ ","p ","_ ","_ "]
 	end	
+
+	it "converts array to string and removes all whitespace" do
+		expect(game.array_to_string(["s","i","m","p","l","e"])).to eq "simple"
+	end
 
 end
