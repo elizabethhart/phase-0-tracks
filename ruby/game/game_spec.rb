@@ -12,7 +12,11 @@ describe Game do
 	end	
 
 	it "checks if the guessed letter is the word array" do
-		expect(game.check_word("simple","p")).to eq true
+		expect(game.check_word("p")).to eq true
 	end
 	
+	it "assigns the letter to the empty array and print string" do
+		expect(game.assign_letter("p")).to eq "_ _ _ p_ _ _ "
+	end	
+
 end
