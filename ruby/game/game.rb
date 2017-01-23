@@ -53,8 +53,8 @@ class Game
 
 	# Convert array to string and remove whitespace
 	def array_to_string(arr)
-		@string = arr.join('')
-		@string = string.delete(" ")
+		@string = arr.join("")
+		@string = @string.delete(" ")
 	end
 
 end
@@ -85,6 +85,7 @@ while guess_count < max_guesses
   # Ask the next user to guess a letter
   puts "Player 2: Please guess a letter:"
   letter = gets.chomp
+  # Check if they've guessed this letter yet
   if guesses.include? letter
   	puts "You've already guessed this letter!"
   else
@@ -93,6 +94,7 @@ while guess_count < max_guesses
   	puts "You have guessed the following letters: #{guesses}"
   end
   game.store(word)
+  # Assign guessed letter to empty array
   if game.check_word(letter)
     @empty_array = game.assign_letter(letter)
     p @empty_array.join('')
@@ -100,7 +102,7 @@ while guess_count < max_guesses
     puts "Nope! Guess again!"
   end
   # If the user guesses all of the letters correctly
-  # !!!!!!!!This loop goes to error if the first guess is wrong?
+  # !!!!!!!!This loop goes to error if the first guess is wrong
   if game.array_to_string(@empty_array) == word
     # Print a congratulations
     puts "Congratulations you guessed the word!"
@@ -115,4 +117,5 @@ while guess_count < max_guesses
       puts "Player 2: You have #{guesses_left} guesses left"
     end
   end
+
 end
