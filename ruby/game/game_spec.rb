@@ -23,7 +23,7 @@ describe Game do
 	end	
 
 	it "converts array to string and removes all whitespace" do
-		expect(game.array_to_string(["t","e","s","t"])).to eq "test"
+		expect(game.array_to_string(["t ","e ","s ","t "])).to eq "test"
 	end
 
 end
