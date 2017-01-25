@@ -13,3 +13,9 @@
 	// Repeat until the index value reaches 0
 
 // Add all characters back into one string
+
+function reverse(str) {
+	return str
+}
+
+console.log(reverse('hello'));
