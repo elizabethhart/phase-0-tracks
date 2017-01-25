@@ -27,3 +27,7 @@ function reverse(str) {
 console.log("What string would you like reversed?");
 var str = prompt("Enter a string:");
 console.log(reverse(str));
+
+if ((4 - 1) > (4 / 2)) {
+	console.log(reverse(str))
+}
