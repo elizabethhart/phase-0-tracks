@@ -1,11 +1,11 @@
 # Virus Predictor
 
 # I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
+# We spent [1] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
-#
+# Require_relative allows access to the contents of another file in your current directory without having to copy all of the code over
+# Require requires a relative link to another folder (if the file is in another directory)
 require_relative 'state_data'
 
 class VirusPredictor
@@ -96,3 +96,24 @@ end
 end
 #=======================================================================
 # Reflection Section
+
+# What are the differences between the two different hash syntaxes shown in the state_data file?
+
+  # You can either use a string or a symbol for you key in a hash. Symbols are beneficial for saving memory, and a symbol for repeating values in your code.
+
+# What does require_relative do? How is it different from require?
+
+  # Require_relative allows access to the contents of another file in your current directory without having to copy all of the code over.
+  # Require requires a relative link to another folder (if the file is in another directory).
+
+# What are some ways to iterate through a hash?
+
+  # .each or .map
+
+# When refactoring virus_effects, what stood out to you about the variables, if anything?
+
+  # The variables are unnecessary in virus_effects because the method only calls other methods, and does not use variables itself.
+
+# What concept did you most solidify in this challenge?
+
+  # Using attr_reader for getter methods for variables, and using instance variables inside the class.
