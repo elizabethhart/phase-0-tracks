@@ -15,7 +15,8 @@
 // Add all characters back into one string
 
 function reverse(str) {
-	return str
+	var arr = str.split('')
+	return arr
 }
 
 console.log(reverse('hello'));
