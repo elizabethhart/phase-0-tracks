@@ -15,13 +15,15 @@
 // Add all characters back into one string
 
 function reverse(str) {
-	var arr = str.split('')
-	var newArr = []
+	var arr = str.split('');
+	var newArr = [];
 	for (var i = 0; i < arr.length; i++) {
-		newIndex = arr.length - 1 - i
-		newArr[i] = arr[newIndex]
+		newIndex = arr.length - 1 - i;
+		newArr[i] = arr[newIndex];
 	}
-	return newArr.join('')
+	return newArr.join('');
 }
 
-console.log(reverse('hello'));
+console.log("What string would you like reversed?");
+var str = prompt("Enter a string:");
+console.log(reverse(str));
