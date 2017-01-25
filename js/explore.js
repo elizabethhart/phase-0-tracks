@@ -16,7 +16,12 @@
 
 function reverse(str) {
 	var arr = str.split('')
-	return arr
+	var newArr = []
+	for (var i = 0; i < arr.length; i++) {
+		newIndex = arr.length - 1 - i
+		newArr[i] = arr[newIndex]
+	}
+	return newArr.join('')
 }
 
 console.log(reverse('hello'));
