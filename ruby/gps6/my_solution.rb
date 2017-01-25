@@ -18,6 +18,9 @@ class VirusPredictor
   end
   # Creates 3 instance variables for state, population, and population_density and assigns it the parameters. 
 
+  # private
+  # Calling this method here does not allow the methods below it to be read, so it results in an error.
+
   def virus_effects
     predicted_deaths
     speed_of_spread
