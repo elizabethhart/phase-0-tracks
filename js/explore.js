@@ -24,9 +24,13 @@ function reverse(str) {
 	return newArr.join('');
 }
 
+// Driver Code for user to input a string
+
 console.log("What string would you like reversed?");
 var str = prompt("Enter a string:");
 console.log(reverse(str));
+
+// Driver Code with conditional statement
 
 if ((4 - 1) > (4 / 2)) {
 	console.log(reverse(str))
