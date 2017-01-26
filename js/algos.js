@@ -28,12 +28,10 @@ function longest_string(arr) {
 // write a function that takes two objects and checks to see if the objects share at least one key value pair
 
 // for each key-value pair in the first object
-	// check if the key equals any of the keys in the second object
+	// check if the key-value pair equals any of the key-value pairs in the second object
 		// if so
-			// check if the value equals the value in the second object
-				// if so
-					// return true
-					// break
+			// return true
+			// break
 		// else
 			// return false
 
