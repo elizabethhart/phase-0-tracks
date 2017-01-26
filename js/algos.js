@@ -40,12 +40,9 @@ function longest_string(arr) {
 function share_pair(obj1,obj2) {
 	for (var i = 0; i < obj1.length; i++) {
 		for (var x = 0; x < obj2.length; x++) {
-			if (obj1[i].key === obj2[x].key) {
-				if (obj1[i].value === obj2[x].value) {
-					return true;
-				}
-			}
-			else {
+			if (obj1[i] === obj2[x]) {
+				return true;
+			} else {
 				return false;
 			}
 		}
