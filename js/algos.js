@@ -11,12 +11,6 @@
 			// rerun the loop for the next value in the array
 // return the first value of the array
 
-// write a function that takes two objects and checks to see if the objects share at least one key value pair
-
-
-
-// write a function that takes an integer for length and builds and returns an array of strings of the given length, the strings have random lengths betweeen 1 and 10
-
 function longest_string(arr) {
 	for (var i = 0; i < arr.length; i++) {
 		for (var x = i + 1; x < arr.length; x++) {
@@ -30,6 +24,20 @@ function longest_string(arr) {
 	}
 	return arr;
 }
+
+// write a function that takes two objects and checks to see if the objects share at least one key value pair
+
+// for each key-value pair in the first object
+	// check if the key equals any of the keys in the second object
+		// if so
+			// check if the value equals the value in the second object
+				// if so
+					// return true
+					// break
+		// else
+			// return false
+
+// write a function that takes an integer for length and builds and returns an array of strings of the given length, the strings have random lengths betweeen 1 and 10
 
 var arr = ["long phrase","longest phrase","longer phrase"];
 
