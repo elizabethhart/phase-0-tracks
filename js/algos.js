@@ -14,7 +14,11 @@
 function longest_string(arr) {
 	for (var i = 0; i < arr.length; i++) {
 		for (var x = i + 1; x < arr.length; x++) {
-			
+			if (arr[i].length < arr[x].length) {
+				var placeholder = arr[i];
+				arr[i] = arr[x];
+				arr[x] = arr[placeholder];
+			}
 		}
 	}
 	return arr;
