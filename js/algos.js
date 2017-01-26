@@ -10,3 +10,7 @@
 		// else 
 			// rerun the loop for the next value in the array
 // return the first value of the array
+
+function longest_string(arr) {
+	return arr
+}
