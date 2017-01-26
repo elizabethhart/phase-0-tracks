@@ -40,12 +40,16 @@ function longest_string(arr) {
 function share_pair(obj1,obj2) {
 	for (var i = 0; i < obj1.length; i++) {
 		for (var x = 0; x < obj2.length; x++) {
-			if (obj1[i].key === obj2[x]) {
-				
+			if (obj1[i].key === obj2[x].key) {
+				if (obj1[i].value === obj2[x].value) {
+					return true;
+				}
+			}
+			else {
+				return false;
 			}
 		}
 	}
-
 }
 
 // write a function that takes an integer for length and builds and returns an array of strings of the given length, the strings have random lengths betweeen 1 and 10
