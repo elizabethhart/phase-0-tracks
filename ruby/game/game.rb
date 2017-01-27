@@ -64,7 +64,7 @@ class Game
 			if guesses_left == 0 
 		    # Print a taunting message
 		    puts "No more guesses! You lost!"
-		    @is_over = false
+		    @is_over = true
 		  else
 	  	  puts "Player 2: You have #{guesses_left} guesses left"
 	  	end
@@ -88,6 +88,7 @@ letter = gets.chomp
 
 while game.guess_count < game.max_guesses
   if game.check_word(letter)
+  	game.check_letter(letter)
     if game.check_letter(letter)
       game.assign_letter(letter)
       if game.check_if_done
