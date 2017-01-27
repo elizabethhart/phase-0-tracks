@@ -52,3 +52,8 @@ function share_pair(obj1,obj2) {
 var arr = ["long phrase","longest phrase","longer phrase"];
 
 console.log(longest_string(arr));
+
+var object1 = { name: "Elizabeth", age: 27, location: "Chicago" };
+var object2 = { name: "Alex", age: 27, location: "Wheaton" };
+
+console.log(share_pair(object1,object2));
