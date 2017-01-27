@@ -45,6 +45,7 @@ function share_pair(obj1,obj2) {
 			}
 		}
 	return outcome;
+	// outcome always coming out as false, even when true??
 }
 
 // write a function that takes an integer for length and builds and returns an array of strings of the given length, the strings have random lengths betweeen 1 and 10
