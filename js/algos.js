@@ -36,15 +36,15 @@ function longest_string(arr) {
 			// return false
 
 function share_pair(obj1,obj2) {
-	for (var i = 0; i < obj1.length; i++) {
-		for (var x = 0; x < obj2.length; x++) {
-			if (obj1[i] === obj2[x]) {
-				return true;
-			} else {
-				return false;
+  	var outcome = false;
+		for (var i = 0; i < obj1.length; i++) {
+			for (var x = 0; x < obj2.length; x++) {
+				if (obj1[i] === obj2[x]) {
+				outcome = true;
+				}
 			}
 		}
-	}
+	return outcome;
 }
 
 // write a function that takes an integer for length and builds and returns an array of strings of the given length, the strings have random lengths betweeen 1 and 10
