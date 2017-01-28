@@ -1,28 +1,21 @@
 class Game
   
-  attr_reader :is_over, :max_guesses
+  attr_reader :is_over, :max_guesses, :word
   attr_accessor :guess_count
   
   def initialize(word)
-    @word = word
-		@word_array = word.split('')
-		@empty_array = []
+   	@word = word
+		@empty_array = create_empty_array
 		@guesses = []
 		@guess_count = 0
-		@is_over = false
-		@max_guesses = 0
 	end
 	
 	def create_empty_array
-		@empty_array = ["_ "]*(@word_array.length)
-	end
-	
-	def number_of_guesses
-		@max_guesses = @word.length + 3
+		["_ "]*(@word.length)
 	end
 	
 	def check_word(letter)
-		@word_array.include? letter
+		@word.include? letter
 	end
 	
 	def check_letter(letter)
@@ -30,16 +23,15 @@ class Game
 			puts "You've already guessed this letter!"
 			puts "Please guess another letter:"
 			return false
-		else
-			@guess_count += 1
-			return true
 		end
+		@guess_count += 1
 		@guesses << letter
 		puts "You have guessed the following letters: #{@guesses}"
+		true
 	end
 	
 	def assign_letter(letter)
-		@word_array.each_with_index do |char,i|
+		@word.split('').each_with_index do |char,i|
 			if char == letter
 				@empty_array[i] = letter
 			end
@@ -58,17 +50,17 @@ class Game
 		if array_to_string(@empty_array) == @word
 			# Print a congratulations
 			puts "Congratulations you guessed the word!"
-			@is_over = true
+			return true
 		else 
-			guesses_left = @max_guesses - @guess_count
+			guesses_left = (@word.length + 3) - @guess_count
 			if guesses_left == 0 
 		    # Print a taunting message
 		    puts "No more guesses! You lost!"
-		    @is_over = true
-		  else
-	  	  puts "Player 2: You have #{guesses_left} guesses left"
+		    return true
+		  end
 	  	end
-		end
+	  	puts "Player 2: You have #{guesses_left} guesses left"
+		false
 	end
   
 end
@@ -80,13 +72,12 @@ game = Game.new(word)
 
 game.create_empty_array
 
-game.number_of_guesses
-puts "Player 2: You have #{game.max_guesses} guesses to find the correct word"
+puts "Player 2: You have #{game.word.length + 3} guesses to find the correct word"
 
 puts "Player 2: Please guess a letter:"
 letter = gets.chomp 
 
-while game.guess_count < game.max_guesses
+until game.check_if_done
   if game.check_word(letter)
   	game.check_letter(letter)
     if game.check_letter(letter)
