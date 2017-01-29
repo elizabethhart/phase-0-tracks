@@ -78,6 +78,7 @@ var arr1 = ["long phrase","longest phrase","longer phrase"];
 
 console.log(longestString(arr1));
 
+// Note: instead of returning longest string, it returns string with the first letter furthest down the alphabet
 var arr2 = ["betsy","eliza","elizabeth","betsy","beth"]
 
 console.log(longestString(arr2));
