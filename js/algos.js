@@ -14,15 +14,14 @@
 function longestString(arr) {
 	for (var i = 0; i < arr.length; i++) {
 		for (var x = i + 1; x < arr.length; x++) {
-			if (arr[i].length < arr[x].length) {
-				// getting undefined length property error for the above line of code
+			if (arr[i] < arr[x]) {
 				var placeholder = arr[i];
 				arr[i] = arr[x];
 				arr[x] = arr[placeholder];
 			}
 		}
 	}
-	return arr;
+	return arr[0];
 }
 
 // write a function that takes two objects and checks to see if the objects share at least one key value pair
@@ -77,7 +76,7 @@ function buildArray(integer) {
 
 var arr = ["long phrase","longest phrase","longer phrase"];
 
-// console.log(longestString(arr));
+console.log(longestString(arr));
 
 var object1 = { name: "Elizabeth", age: 27, location: "Chicago" };
 var object2 = { name: "Alex", age: 27, location: "Wheaton" };
