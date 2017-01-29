@@ -36,9 +36,9 @@ function longestString(arr) {
 
 function sharePair(obj1,obj2) {
   	var outcome = false;
-		for (var i = 0; i < Object.keys(object1).length; i++) {
-			for (var x = 0; x < Object.keys(object2).length; x++) {
-				if (Object.values(object1)[i] === Object.values(object2)[x]) {
+		for (var i = 0; i < Object.keys(obj1).length; i++) {
+			for (var x = 0; x < Object.keys(obj2).length; x++) {
+				if (Object.values(obj1)[i] === Object.values(obj2)[x]) {
 				outcome = true;
 				}
 			}
@@ -74,13 +74,29 @@ function buildArray(integer) {
   return arr;
 }
 
-var arr = ["long phrase","longest phrase","longer phrase"];
+var arr1 = ["long phrase","longest phrase","longer phrase"];
 
-console.log(longestString(arr));
+console.log(longestString(arr1));
 
-var object1 = { name: "Elizabeth", age: 27, location: "Chicago" };
-var object2 = { name: "Alex", age: 27, location: "Wheaton" };
+var arr2 = ["betsy","eliza","elizabeth","betsy","beth"]
+
+console.log(longestString(arr2));
+
+var object1 = { name: "Big Bird", age: 5, location: "Sesame Street" };
+var object2 = { name: "Oscar the Grouch", age: 13, location: "Garbage Can" };
 
 console.log(sharePair(object1,object2));
 
-console.log(buildArray(4));
+var object3 = { name: "Bruce Wayne", location: "Gotham" };
+var object4 = { name: "Batman", location: "Gotham" };
+
+console.log(sharePair(object3,object4));
+
+for (var i = 0; i < 10; i++) {
+	testArray = buildArray(5);
+	console.log(testArray);
+	testString = longestString(testArray);
+	console.log(testString);
+}
+
+
