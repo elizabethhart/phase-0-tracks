@@ -37,15 +37,14 @@ function longestString(arr) {
 
 function sharePair(obj1,obj2) {
   	var outcome = false;
-		for (var i = 0; i < obj1.length; i++) {
-			for (var x = 0; x < obj2.length; x++) {
-				if (obj1[i] === obj2[x]) {
+		for (var i = 0; i < Object.keys(object1).length; i++) {
+			for (var x = 0; x < Object.keys(object2).length; x++) {
+				if (Object.values(object1)[i] === Object.values(object2)[x]) {
 				outcome = true;
 				}
 			}
 		}
 	return outcome;
-	// outcome always coming out as false, even when true??
 }
 
 // write a function that takes an integer for length and builds and returns an array of strings of the given length, the strings have random lengths betweeen 1 and 10
@@ -83,6 +82,6 @@ var arr = ["long phrase","longest phrase","longer phrase"];
 var object1 = { name: "Elizabeth", age: 27, location: "Chicago" };
 var object2 = { name: "Alex", age: 27, location: "Wheaton" };
 
-// console.log(sharePair(object1,object2));
+console.log(sharePair(object1,object2));
 
 console.log(buildArray(4));
