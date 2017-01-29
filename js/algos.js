@@ -64,12 +64,12 @@ function buildArray(integer) {
   var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","y","z"];
   var arr = [];
   for (var i = 0; i < integer; i++) {
-    var randLength = Math.random()*10;
+    var randLength = Math.ceil(Math.random()*10);
     var str = "";
-    for (var x = 0; x < Math.floor(randLength); x++) {
-      var idx = Math.random()*26;
+    for (var x = 0; x < randLength; x++) {
+      var idx = Math.floor(Math.random()*25);
       var char = alphabet[idx];
-      str.concat(char);
+      str += char;
     }
     arr.push(str);
   }
@@ -83,6 +83,6 @@ var arr = ["long phrase","longest phrase","longer phrase"];
 var object1 = { name: "Elizabeth", age: 27, location: "Chicago" };
 var object2 = { name: "Alex", age: 27, location: "Wheaton" };
 
-//console.log(sharePair(object1,object2));
+// console.log(sharePair(object1,object2));
 
 console.log(buildArray(4));
