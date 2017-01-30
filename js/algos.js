@@ -9,18 +9,15 @@
 // return the first value of the array
 
 function longestString(arr) {
-  var maxIndex = 0;
-  var maxLength = arr[maxIndex].length;
-	for (var i = 0; i < arr.length; i++) {
-	  var nextLength = arr[i].length;
-	  if (maxLength < nextLength) {
-	    maxIndex = i;
-	    maxLength = arr[i].length;
-	    maxString = arr[i];
-	  }
-  }
-  return maxString;
+	var maxString = arr[0];
+	for(var i=0; i < arr.length; i++) {
+        if(arr[i].length > maxString.length) {
+        maxString = arr[i];
+    	}
+  	}
+ return maxString;
 }
+
 
 // write a function that takes two objects and checks to see if the objects share at least one key value pair
 
