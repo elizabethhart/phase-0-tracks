@@ -30,14 +30,12 @@ function longestString(arr) {
 			// return false
 
 function sharePair(obj1,obj2) {
-  	var outcome = false;
-		for (var i = 0; i < Object.keys(obj1).length; i++) {
-			for (var x = 0; x < Object.keys(obj2).length; x++) {
-				if (Object.values(obj1)[i] === Object.values(obj2)[x]) {
-				outcome = true;
-				}
-			}
+	var outcome = false;
+	for(var key in obj1) {
+		if (obj1[key] == obj2[key]) {
+			outcome = true;
 		}
+	}
 	return outcome;
 }
 
