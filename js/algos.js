@@ -9,18 +9,15 @@
 // return the first value of the array
 
 function longestString(arr) {
-  var maxIndex = 0;
-  var maxLength = arr[maxIndex].length;
-	for (var i = 0; i < arr.length; i++) {
-	  var nextLength = arr[i].length;
-	  if (maxLength < nextLength) {
-	    maxIndex = i;
-	    maxLength = arr[i].length;
-	    maxString = arr[i];
-	  }
-  }
-  return maxString;
+	var maxString = arr[0];
+	for(var i=0; i < arr.length; i++) {
+        if(arr[i].length > maxString.length) {
+        maxString = arr[i];
+    	}
+  	}
+ return maxString;
 }
+
 
 // write a function that takes two objects and checks to see if the objects share at least one key value pair
 
@@ -33,14 +30,12 @@ function longestString(arr) {
 			// return false
 
 function sharePair(obj1,obj2) {
-  	var outcome = false;
-		for (var i = 0; i < Object.keys(obj1).length; i++) {
-			for (var x = 0; x < Object.keys(obj2).length; x++) {
-				if (Object.values(obj1)[i] === Object.values(obj2)[x]) {
-				outcome = true;
-				}
-			}
+	var outcome = false;
+	for(var key in obj1) {
+		if (obj1[key] == obj2[key]) {
+			outcome = true;
 		}
+	}
 	return outcome;
 }
 
