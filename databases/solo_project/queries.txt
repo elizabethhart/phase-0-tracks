@@ -5,3 +5,37 @@ sqlite> SELECT * FROM fruits;
 2|Orange|45|true|2
 3|Lemon|17|true|1
 4|Cantelope|186|false|2
+
+
+2. Update an item that meets some condition (you can choose a condition that makes sense).
+
+sqlite> UPDATE fruits SET calories=149 WHERE name="Cantelope";
+sqlite> SELECT * FROM fruits;
+1|Banana|105|false|1
+2|Orange|45|true|2
+3|Lemon|17|true|1
+4|Cantelope|149|false|2
+
+
+3. Display the information in both tables using one query.
+
+sqlite> SELECT * FROM fruits, colors WHERE fruits.color_id = colors.id;
+1|Banana|105|false|1|1|yellow
+2|Orange|45|true|2|2|orange
+3|Lemon|17|true|1|1|yellow
+4|Cantelope|149|false|2|2|orange
+
+4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+sqlite> SELECT fruits.name, colors.color FROM fruits JOIN colors ON fruits.color_id = colors.id;
+Banana|yellow
+Orange|orange
+Lemon|yellow
+Cantelope|orange
+
+5. Delete an item that meets some condition (you can choose a condition that makes sense).
+
+sqlite> DELETE FROM fruits WHERE citrus="false";
+sqlite> SELECT * FROM fruits;
+2|Orange|45|true|2
+3|Lemon|17|true|1
