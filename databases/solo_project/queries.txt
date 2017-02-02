@@ -39,3 +39,19 @@ sqlite> DELETE FROM fruits WHERE citrus="false";
 sqlite> SELECT * FROM fruits;
 2|Orange|45|true|2
 3|Lemon|17|true|1
+
+----
+
+JOIN command trials:
+
+sqlite> SELECT name, calories, color FROM fruits JOIN colors ON fruits.color_id = colors.id;
+Orange|45|orange
+Lemon|17|yellow
+
+sqlite> SELECT color, name FROM fruits LEFT OUTER JOIN colors ON fruits.color_id = colors.id;
+orange|Orange
+yellow|Lemon
+
+sqlite> SELECT name, color FROM fruits LEFT OUTER JOIN colors ON fruits.color_id = colors.id;
+Orange|orange
+Lemon|yellow
