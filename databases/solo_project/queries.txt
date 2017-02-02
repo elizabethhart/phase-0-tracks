@@ -1,0 +1,7 @@
+1. Display the information in one table (either table is fine).
+
+sqlite> SELECT * FROM fruits;
+1|Banana|105|false|1
+2|Orange|45|true|2
+3|Lemon|17|true|1
+4|Cantelope|186|false|2
