@@ -29,7 +29,6 @@ end
 # driver code for users adding data
 
 response = ""
-
 until response == "done"
 	puts "Please enter the student's name, or type done to exit"
 	student_name = gets.chomp
@@ -43,3 +42,5 @@ until response == "done"
 		log_grade(db, student_name, assignment_name, grade)
 	end
 end
+
+
