@@ -25,3 +25,21 @@ db.execute(grades_log)
 def log_grade(db, student_name, assignment_name, grade)
 	db.execute("INSERT INTO grades (student_name, assignment_name, grade) VALUES (?, ?, ?)", [student_name, assignment_name, grade])
 end
+
+# driver code for users adding data
+
+response = ""
+
+until response == "done"
+	puts "Please enter the student's name, or type done to exit"
+	student_name = gets.chomp
+	if student_name == "done"
+		response = "done"
+	else
+		puts "Please enter the assignment name"
+		assignment_name = gets.chomp
+		puts "Please enter the grade"
+		grade = gets.chomp
+		log_grade(db, student_name, assignment_name, grade)
+	end
+end
