@@ -1,4 +1,6 @@
-# require gems
+# Business Logic
+
+# require gem
 
 require 'sqlite3'
 
@@ -58,12 +60,20 @@ def question_user(response)
 	end
 end
 
-# driver code for users adding data
+#Driver Code
 
-puts "Welcome to your gradebook!"
-puts "Do you want to (1) enter grades OR (2) view grades? Please enter a number:"
-response = gets.chomp
-question_user(response)
+complete = false
+until complete
+	puts "Welcome to your gradebook!"
+	puts "Do you want to (1) enter grades OR (2) view grades? Please enter a number:"
+	response = gets.chomp
+	question_user(response)
+	puts "Are you finished? (y/n)"
+	response_2 = gets.chomp
+	if response_2 == "y"
+		complete = true
+	end
+end
 
 
 
