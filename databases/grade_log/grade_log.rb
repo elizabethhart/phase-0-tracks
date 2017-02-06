@@ -39,10 +39,14 @@ def log_grade
 	end
 end
 
+# method for viewing grades
+
 def view_grades
 	db = SQLite3::Database.new("grades.db")
 	db.execute("SELECT * FROM grades")
 end
+
+# method for determining what the user wants to view
 
 def question_user(response)
 	if response == "y"
