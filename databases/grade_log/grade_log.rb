@@ -66,6 +66,7 @@ end
 
 # driver code for users adding data
 
+puts "Welcome to your gradebook!"
 puts "Do you want to enter grades? (y/n)"
 response = gets.chomp
 question_user(response)
