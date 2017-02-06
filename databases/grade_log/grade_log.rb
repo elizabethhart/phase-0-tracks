@@ -43,22 +43,16 @@ end
 
 def view_grades
 	db = SQLite3::Database.new("grades.db")
-	db.execute("SELECT * FROM grades")
+	p db.execute("SELECT * FROM grades")
 end
 
 # method for determining what the user wants to view
 
 def question_user(response)
-	if response == "y"
+	if response == "1"
 		log_grade
-	elsif response == "n"
-		puts "Do you want to view your previously entered grades? (y/n)"
-		response2 = gets.chomp
-		if response2 == "y"
-			p view_grades
-		else
-			puts "Goodbye"
-		end
+	elsif response == "2"
+		view_grades
 	else
 		puts "This is an invalid response"
 	end
@@ -67,7 +61,7 @@ end
 # driver code for users adding data
 
 puts "Welcome to your gradebook!"
-puts "Do you want to enter grades? (y/n)"
+puts "Do you want to (1) enter grades OR (2) view grades? Please enter a number:"
 response = gets.chomp
 question_user(response)
 
