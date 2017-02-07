@@ -1,0 +1,63 @@
+body {
+	background-color: #99ffd6;
+	width: 960px;
+	/* centered entire body */
+	margin: 0 auto;
+	/* added new font */
+	font-family: 'Permanent Marker', cursive;
+}
+
+h2 {
+	/* underline all level 2 headings */
+	text-decoration: underline;
+}
+
+img {
+	border-radius: 10px;
+	border: 1px solid black;
+	max-width: 300px;
+}
+
+.body-heading-styling {
+	/* padding and border added */
+	border: 2px solid black;
+	/* margin added */
+	margin: 10px;
+	border-radius: 10px;
+	padding: 0px 10px 10px 10px;
+	background-color: #e6ffff;
+}
+
+/* styled elements using a an id */
+#examples {
+	margin: 20px;
+	text-align: center;
+}
+
+/* styled form using an id */
+#background-image {
+	/* added background image */
+	background-image: url(http://i.imgur.com/FAAJYfS.jpg?2);
+}
+
+/* styled form using an id */
+#form {
+	background-color: #e6ffff;
+	margin: 20px 10px;
+	border: 2px solid gray;
+	border-radius: 10px;
+	padding: 0px 10px 10px 10px;
+}
+
+/* different color for visited links */
+a:visited {
+	color: purple;
+}
+
+/* add media query */
+@media screen and (max-width: 500px) {
+	body {
+		font-size: 50%;
+		width: 500px;
+	}
+}

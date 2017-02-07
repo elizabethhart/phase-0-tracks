@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Elizabeth's Art Studio</title>
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body>
+	<div class="body-heading-styling">
+		<h1>Elizabeth Hart's Art Studio</h1>
+	</div>
+	<!-- Start Introduction Section -->
+	<div class="body-heading-styling">
+		<h2>Introduction</h2>
+		<p>I have been creating art my whole life. This page was created to share some of my work. Here are some of the mediums I have worked in:</p>
+		<!-- Start Unordered List with nested unordered lists -->
+		<ul>
+			<li>Drawing
+				<ul>
+					<li>Pencil</li>
+					<li>Pen</li>
+					<li>Charcoal</li>
+					<li>Ink</li>
+				</ul>
+			</li>
+			<li>Painting
+				<ul>
+					<li>Acrylic</li>
+					<li>Oil</li>
+					<li>Watercolor</li>
+				</ul>
+			</li>
+			<li>Photography</li>
+		</ul>
+		<!-- End Unordered List -->
+	</div>
+	<!-- End Introduction Section -->
+	<!-- Start Images Section -->
+	<div class="body-heading-styling" id="examples">
+		<h2>Examples</h2>
+			<h3>Drawing</h3>
+			<img src="http://i.imgur.com/CgKY01Z.jpg?1" alt="Drawing Sample">
+			<img src="http://i.imgur.com/RssVtLC.jpg?1" alt="Drawing Sample">
+			<h3>Painting</h3>
+			<img src="http://i.imgur.com/dyIjGw7.jpg?1" alt="Painting Sample">
+	</div>
+	<!-- End Images Section -->
+	<div class="body-heading-styling">
+		<h2>Connect with me!</h2>
+		<!-- Start Form -->
+		<form id="form-border" action="https://httpbin.org/post" method="post">
+			<div>
+				<label>Email:</label>
+				<input type="email" name="email">
+			</div>
+			<div>
+				<label>First Name:</label>
+				<input type="text" name="firstname">
+			</div>
+			<div>
+				<label>What would you like to see more of?</label>
+				<select name="mediatype">
+					<option value="media">Drawing</option>
+					<option value="media">Painting</option>
+					<option value="media">Other</option>
+				</select>
+			</div>
+			<button type="submit">Submit</button>
+		</form>
+	</div>
+	<!-- End Form -->
+	<div class="body-heading-styling">
+		<h2>Links</h2>
+	<!-- Link to imgur -->
+		<p>My other work can be found on <a href="https://ewhart2.imgur.com/">Imgur</a>.</p>
+		<!-- Link to new page -->
+		<p>Would you like to commission a piece? Please see my other page <a href="new-page.html">here</a>.</p>
+	</div>
+	<!-- Start Release 1, Item 4 -->
+	<!-- <p>Here is a link to a similar page for a <a href="http://www.benasart.com/">professional artist</a>. The source code for this page is a lot more complicated than the one I have created, and also includes lots of classes, etc for linking to their CSS. The code is good because there are several comments indicating what each section is for. Also the code appears to be separated into several block elements, which makes the page easy to read.</p>
+	End Release 1, Item 4 -->
+	<script src="script.js"></script>
+</body>
+</html>
