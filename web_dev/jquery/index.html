@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Testing</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+	<h1 class="heading">Heading 1</h1>
+	<p id="sliding">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque tellus viverra lorem blandit gravida. Cras in dui porttitor, tincidunt dolor sit amet, commodo ipsum. Praesent sagittis luctus congue. Etiam sed luctus risus. Nam ut sem in leo auctor commodo at quis lorem. Phasellus dolor elit, pharetra vel sem vel, hendrerit aliquam libero. Nam et ipsum ex. Vestibulum rhoncus iaculis mauris, non maximus lacus. Phasellus facilisis dolor et diam volutpat mattis. Integer sit amet enim a erat laoreet vehicula sed at risus.</p>
+	<a href="www.google.com">Google</a>
+	<h2 class="heading">Heading 2</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet sed neque eu rutrum. Aliquam ultrices quam in ipsum ultricies commodo. Etiam ut interdum ipsum. Etiam elit ante, dapibus et porta fermentum, sodales a massa. Proin non porttitor nunc. Fusce lectus nisi, facilisis in leo eu, fringilla viverra ligula. Curabitur condimentum dignissim massa, eget rutrum justo consectetur et. Nunc ut diam dapibus, imperdiet magna id, vestibulum massa. Proin egestas, urna ac pretium aliquet, metus sapien imperdiet augue, at pharetra enim dolor sed ex. Etiam tristique suscipit sem eu commodo. Phasellus mattis bibendum magna, a accumsan dui lobortis sed.</p>
+	<button type="button">Click this button!</button>
+	<script type="text/javascript">
+    	$(document).ready(function(){
+
+          $(".heading").css("color", "orange");
+
+          $("button").click(function(){
+          	$(this).fadeToggle(500).fadeToggle(1000);
+          });
+
+          $("a").mouseenter(function(){
+          	$(this).css("background-color", "green");
+          });
+
+          $("a").mouseleave(function(){
+          	$(this).css("background-color", "red");
+          });
+
+          $("p:last").css("color", "blue");
+
+          $("p:first").append(" Here is a bunch of new text!!!!!!!!!!!!").css("background-color", "yellow");
+
+          $("#sliding").dblclick(function(){
+          	$(this).slideUp();
+          });
+
+    	});
+    </script> 
+
+</body>
+</html>
