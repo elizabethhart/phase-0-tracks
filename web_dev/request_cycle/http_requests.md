@@ -18,12 +18,16 @@ What are some common HTTP status codes?
 
 What is the difference between a GET request and a POST request? When might each be used?
 
-GET requests are used when you want to get data from a specified resource.
-POST requests are used when you want to send data to a specified resource.
+GET requests are used when you want to get data from a specified resource. 
+All data is encoded into the URL.
+Stays in browser history, can be bookmarked, limited characters, can be cached.
+POST requests are used when you want to send data to a specified resource. 
+Form data is in the message of the request.
+Not saved in browser history, cannot be bookmarked, unlimited characters, not cached.
 
-GET requests could be used for a search request when are trying to find a page, but don't want to edit it.
-POST request are used when there is a higher security, like when you are modifying the contents of a database.
+GET requests could be used for a search request when are trying to access the html, css, or image files for a webpage, but don't want to edit them.
+POST request are used when there is a higher security, like when you are sending the contents of a form to add to a database.
 
 Optional bonus question: What is a cookie (the technical kind, not the delicious kind)? How does it relate to HTTP requests?
 
-A cookie is a small piece of data from a website that is stored on the user's computer, and they are used by the website to track data about the user for when they are using that website.
+A cookie is a small piece of data from a website that is stored on the user's computer, and they are used by the website to track data about the user for when they are using that website. Sent by the server, and then sent back by the user with their next request, so that the server can determine if multiple requests are coming from the same user.
