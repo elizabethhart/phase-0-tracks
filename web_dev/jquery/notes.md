@@ -9,3 +9,5 @@ jquery gameplan:
 1:05 - 1:30: Watch a few youtube videos about jquery.
 
 1:30 - 2:00: Test jquery out on my own.
+
+The two most beneficial things during my search were the w3schools jquery overview and examples, and also youtube videos showing jquery commands and their effects in real time. 
