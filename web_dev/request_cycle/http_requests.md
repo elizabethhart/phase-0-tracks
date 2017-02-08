@@ -25,7 +25,7 @@ POST requests are used when you want to send data to a specified resource.
 Form data is in the message of the request.
 Not saved in browser history, cannot be bookmarked, unlimited characters, not cached.
 
-GET requests could be used for a search request when are trying to view a webpage, but don't want to edit it.
+GET requests could be used for a search request when are trying to access the html, css, or image files for a webpage, but don't want to edit them.
 POST request are used when there is a higher security, like when you are sending the contents of a form to add to a database.
 
 Optional bonus question: What is a cookie (the technical kind, not the delicious kind)? How does it relate to HTTP requests?
