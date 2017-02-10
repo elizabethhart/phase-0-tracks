@@ -25,16 +25,30 @@ end
 
 # write a GET route that retrieves
 # all student data
-get '/students' do
+get '/students/' do
+  campus = params[:campus]
   students = db.execute("SELECT * FROM students")
+  filtered_response = ""
   response = ""
   students.each do |student|
-    response << "ID: #{student['id']}<br>"
-    response << "Name: #{student['name']}<br>"
-    response << "Age: #{student['age']}<br>"
-    response << "Campus: #{student['campus']}<br><br>"
+    # modified to take a query parameter of campus to filter students 
+    if student['campus'] == campus
+      filtered_response << "ID: #{student['id']}<br>"
+      filtered_response << "Name: #{student['name']}<br>"
+      filtered_response << "Age: #{student['age']}<br>"
+      filtered_response << "Campus: #{student['campus']}<br><br>"
+    else
+      response << "ID: #{student['id']}<br>"
+      response << "Name: #{student['name']}<br>"
+      response << "Age: #{student['age']}<br>"
+      response << "Campus: #{student['campus']}<br><br>"
+    end
   end
-  response
+  if campus
+    filtered_response
+  else
+    response
+  end
 end
 
 # write a GET route that retrieves
@@ -43,4 +57,31 @@ end
 get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
+end
+
+# write a GET route that displays an address
+
+get '/contact/:address' do
+  address = params[:address]
+  "Address: #{params[:address]}"
+end
+
+# write a GET route that takes a person's name 
+# as a query parameter
+
+get '/great_job/' do
+  name = params[:name]
+  if name
+    "Good job, #{name}!"
+  else
+    "Good job!"
+  end
+end
+
+# write a GET route with
+# route parameters to add two numbers
+
+get '/:num_1/plus/:num_2' do
+  total = (params[:num_1].to_i + params[:num_2].to_i).to_s
+  "#{params[:num_1]} + #{params[:num_2]} = #{total}"
 end
