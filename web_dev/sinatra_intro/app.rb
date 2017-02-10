@@ -25,16 +25,30 @@ end
 
 # write a GET route that retrieves
 # all student data
-get '/students' do
+get '/students/' do
+  campus = params[:campus]
   students = db.execute("SELECT * FROM students")
+  filtered_response = ""
   response = ""
   students.each do |student|
-    response << "ID: #{student['id']}<br>"
-    response << "Name: #{student['name']}<br>"
-    response << "Age: #{student['age']}<br>"
-    response << "Campus: #{student['campus']}<br><br>"
+    # modified to take a query parameter of campus to filter students 
+    if student['campus'] == campus
+      filtered_response << "ID: #{student['id']}<br>"
+      filtered_response << "Name: #{student['name']}<br>"
+      filtered_response << "Age: #{student['age']}<br>"
+      filtered_response << "Campus: #{student['campus']}<br><br>"
+    else
+      response << "ID: #{student['id']}<br>"
+      response << "Name: #{student['name']}<br>"
+      response << "Age: #{student['age']}<br>"
+      response << "Campus: #{student['campus']}<br><br>"
+    end
   end
-  response
+  if campus
+    filtered_response
+  else
+    response
+  end
 end
 
 # write a GET route that retrieves
@@ -52,7 +66,8 @@ get '/contact/:address' do
   "Address: #{params[:address]}"
 end
 
-# write a GET route that takes a person's name as a query parameter
+# write a GET route that takes a person's name 
+# as a query parameter
 
 get '/great_job/' do
   name = params[:name]
